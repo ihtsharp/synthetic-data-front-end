@@ -1,0 +1,712 @@
+/* =========================================================
+   SYNFRAME OS
+   NEON MINT / CORE NAVY / SOFT GRAY / GRAPHITE
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #2F2F2F;
+    color: #E6E9EC;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 30px 50px;
+
+    background: #00203F;
+
+    border-bottom: 4px solid #36ECDE;
+}
+
+.logo h1 {
+    color: #36ECDE;
+
+    letter-spacing: 5px;
+
+    font-size: 2.5rem;
+
+    font-weight: 800;
+}
+
+.logo p {
+    margin-top: 8px;
+
+    color: #E6E9EC;
+
+    letter-spacing: 1px;
+
+    opacity: 0.75;
+}
+
+.status {
+    text-align: right;
+}
+
+.online {
+    display: flex;
+
+    justify-content: flex-end;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: #36ECDE;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+.dot {
+    width: 10px;
+
+    height: 10px;
+
+    border-radius: 50%;
+
+    background: #36ECDE;
+
+    box-shadow:
+        0 0 8px #36ECDE;
+}
+
+.version {
+    margin-top: 10px;
+
+    color: #E6E9EC;
+
+    opacity: 0.6;
+
+    font-size: 13px;
+}
+
+/* =========================================================
+   MAIN CONTAINER
+========================================================= */
+
+.container {
+    width: 95%;
+
+    max-width: 1400px;
+
+    margin: 30px auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 25px;
+}
+
+/* =========================================================
+   PANELS
+========================================================= */
+
+.upload-panel,
+.control-panel,
+.status-panel,
+.terminal-panel {
+
+    background: #00203F;
+
+    border: 1px solid rgba(54, 236, 222, 0.35);
+
+    border-radius: 10px;
+
+    padding: 24px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.upload-panel {
+    min-height: 520px;
+}
+
+.control-panel,
+.status-panel {
+    min-height: 460px;
+}
+
+.terminal-panel {
+    min-height: 230px;
+}
+
+/* =========================================================
+   SECTION HEADINGS
+========================================================= */
+
+h2 {
+    color: #36ECDE;
+
+    font-size: 18px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 25px;
+
+    text-transform: uppercase;
+}
+
+/* =========================================================
+   MIDDLE GRID
+========================================================= */
+
+.middle {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 25px;
+}
+
+/* =========================================================
+   UPLOAD CONTENT
+========================================================= */
+
+.upload-content {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 22px;
+
+    margin-top: 30px;
+}
+
+.upload-icon {
+    font-size: 55px;
+
+    color: #36ECDE;
+
+    text-shadow:
+        0 0 15px rgba(54, 236, 222, 0.45);
+}
+
+.upload-content h3 {
+    font-size: 42px;
+
+    letter-spacing: 3px;
+
+    color: #E6E9EC;
+
+    text-align: center;
+}
+
+.upload-content p {
+    color: #E6E9EC;
+
+    line-height: 1.7;
+
+    text-align: center;
+
+    font-size: 20px;
+
+    opacity: 0.75;
+}
+
+/* =========================================================
+   SUPPORTED FILE TYPES
+========================================================= */
+
+.supported-files {
+    display: flex;
+
+    gap: 18px;
+
+    margin-top: 10px;
+}
+
+.supported-files span {
+    border: 1px solid #36ECDE;
+
+    padding: 12px 28px;
+
+    letter-spacing: 2px;
+
+    color: #36ECDE;
+
+    background: #2F2F2F;
+
+    transition: 0.3s;
+}
+
+.supported-files span:hover {
+    background: #36ECDE;
+
+    color: #00203F;
+
+    box-shadow:
+        0 0 15px rgba(54, 236, 222, 0.35);
+}
+
+/* =========================================================
+   INSERT DATASET
+========================================================= */
+
+.insert-btn {
+    display: inline-block;
+
+    text-align: center;
+
+    margin-top: 10px;
+
+    padding: 16px 50px;
+
+    font-size: 17px;
+
+    letter-spacing: 2px;
+
+    background: #36ECDE;
+
+    color: #00203F;
+
+    border: 2px solid #36ECDE;
+
+    border-radius: 5px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.insert-btn:hover {
+    background: transparent;
+
+    color: #36ECDE;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 0 20px rgba(54, 236, 222, 0.35);
+}
+
+/* =========================================================
+   MACHINE STATUS
+========================================================= */
+
+.machine-status {
+    color: #36ECDE;
+
+    letter-spacing: 3px;
+
+    font-size: 15px;
+
+    font-weight: bold;
+}
+
+/* =========================================================
+   CONTROL PANEL
+========================================================= */
+
+.control-content {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 22px;
+}
+
+.control-section {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+.control-section > label {
+    color: #E6E9EC;
+
+    font-size: 17px;
+
+    letter-spacing: 1px;
+}
+
+/* =========================================================
+   RADIO GROUP
+========================================================= */
+
+.radio-group {
+    display: flex;
+
+    gap: 30px;
+}
+
+.radio-group label {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #E6E9EC;
+
+    cursor: pointer;
+}
+
+.radio-group input[type="radio"] {
+    accent-color: #36ECDE;
+}
+
+/* =========================================================
+   TYPE BUTTONS
+========================================================= */
+
+.type-buttons {
+    display: flex;
+
+    gap: 15px;
+}
+
+.type-buttons button {
+    background: #2F2F2F;
+
+    color: #E6E9EC;
+
+    border: 1px solid #36ECDE;
+
+    padding: 12px 24px;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+
+    border-radius: 5px;
+}
+
+.type-buttons button:hover {
+    background: #36ECDE;
+
+    color: #00203F;
+}
+
+/* =========================================================
+   RANGE SLIDER
+========================================================= */
+
+input[type="range"] {
+    width: 100%;
+
+    cursor: pointer;
+
+    accent-color: #36ECDE;
+}
+
+/* =========================================================
+   RECORD DISPLAY
+========================================================= */
+
+.record-display {
+    width: 140px;
+
+    height: 55px;
+
+    margin: 10px auto 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: #2F2F2F;
+
+    border: 2px solid #36ECDE;
+
+    border-radius: 6px;
+
+    color: #36ECDE;
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    box-shadow:
+        inset 0 0 12px rgba(0, 0, 0, 0.5);
+}
+
+/* =========================================================
+   GENERATE BUTTON
+========================================================= */
+
+.generate-btn {
+    width: 100%;
+
+    padding: 16px;
+
+    margin-top: 10px;
+
+    background: #36ECDE;
+
+    color: #00203F;
+
+    border: 2px solid #36ECDE;
+
+    border-radius: 5px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.generate-btn:hover {
+    background: transparent;
+
+    color: #36ECDE;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 0 20px rgba(54, 236, 222, 0.35);
+}
+
+.generate-btn:disabled {
+    background: #53616A;
+
+    border-color: #53616A;
+
+    color: #B8BEC2;
+
+    cursor: not-allowed;
+
+    transform: none;
+
+    box-shadow: none;
+}
+
+/* =========================================================
+   SYSTEM STATUS
+========================================================= */
+
+.status-content {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+.status-item {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 14px;
+
+    border: 1px solid rgba(54, 236, 222, 0.3);
+
+    border-radius: 6px;
+
+    background: #2F2F2F;
+}
+
+.status-item span {
+    color: #E6E9EC;
+
+    font-size: 15px;
+
+    opacity: 0.65;
+}
+
+.status-item strong {
+    color: #36ECDE;
+
+    letter-spacing: 1px;
+}
+
+/* =========================================================
+   FILE INFORMATION
+========================================================= */
+
+.file-info {
+    margin-top: 20px;
+
+    padding: 15px;
+
+    border: 1px solid rgba(54, 236, 222, 0.3);
+
+    border-radius: 6px;
+
+    background: #2F2F2F;
+
+    width: 320px;
+}
+
+.file-info p {
+    margin: 6px 0;
+
+    color: #E6E9EC;
+}
+
+/* =========================================================
+   TERMINAL
+========================================================= */
+
+.terminal-window {
+    margin-top: 20px;
+
+    background: #2F2F2F;
+
+    border: 1px solid #36ECDE;
+
+    border-radius: 6px;
+
+    padding: 15px;
+
+    height: 120px;
+
+    overflow-y: auto;
+
+    font-family: Consolas, monospace;
+
+    box-shadow:
+        inset 0 0 20px rgba(0, 0, 0, 0.45);
+}
+
+.terminal-window p {
+    color: #36ECDE;
+
+    margin: 6px 0;
+
+    font-size: 14px;
+}
+
+/* =========================================================
+   TERMINAL SCROLLBAR
+========================================================= */
+
+.terminal-window::-webkit-scrollbar {
+    width: 6px;
+}
+
+.terminal-window::-webkit-scrollbar-track {
+    background: #2F2F2F;
+}
+
+.terminal-window::-webkit-scrollbar-thumb {
+    background: #36ECDE;
+
+    border-radius: 10px;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .middle {
+        grid-template-columns: 1fr;
+    }
+
+    .header {
+        flex-direction: column;
+
+        gap: 20px;
+
+        align-items: flex-start;
+    }
+
+    .status {
+        text-align: left;
+    }
+
+    .online {
+        justify-content: flex-start;
+    }
+
+    .upload-content h3 {
+        font-size: 30px;
+    }
+
+    .supported-files {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .file-info {
+        width: 90%;
+    }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .header {
+        padding: 25px;
+    }
+
+    .logo h1 {
+        font-size: 1.8rem;
+
+        letter-spacing: 3px;
+    }
+
+    .container {
+        width: 92%;
+
+        margin: 20px auto;
+    }
+
+    .upload-panel,
+    .control-panel,
+    .status-panel,
+    .terminal-panel {
+        padding: 18px;
+    }
+
+    .upload-content h3 {
+        font-size: 24px;
+    }
+
+    .upload-content p {
+        font-size: 16px;
+    }
+
+    .supported-files {
+        gap: 8px;
+    }
+
+    .supported-files span {
+        padding: 9px 15px;
+    }
+
+    .radio-group {
+        gap: 18px;
+    }
+}

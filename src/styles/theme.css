@@ -1,0 +1,19 @@
+:root {
+  --bg: #FAF6F2;
+  --panel: #FFFFFF;
+  --panel2: #F1E9E3;
+  --border: #D9CCC3;
+
+  --text: #9db7c7;
+  --muted: #6087c9;
+
+  --accent: #274a7c;
+
+  --success: #b88ce0;
+  --warning: #f06aa2;
+  --danger: #B0342A;
+
+  --radius: 12px;
+
+  --transition: 0.25s ease;
+}
